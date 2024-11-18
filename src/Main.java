@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static int moltiplica(int a, int b) {
         return a * b; // Restituisce il prodotto di a e b
@@ -39,6 +41,34 @@ public class Main {
         for (String s : nuovoArray) {
             System.out.print(s + " ");
         }
+    }
+
+    public static void esDue(String[] args) {
+        // Creare uno scanner per leggere l'input dell'utente
+        Scanner scanner = new Scanner(System.in);
+
+        // Chiedere all'utente di inserire 3 stringhe
+        System.out.println("Inserisci la prima stringa:");
+        String stringa1 = scanner.nextLine();
+
+        System.out.println("Inserisci la seconda stringa:");
+        String stringa2 = scanner.nextLine();
+
+        System.out.println("Inserisci la terza stringa:");
+        String stringa3 = scanner.nextLine();
+
+        // Concatenare le stringhe in ordine di inserimento
+        String concatenazioneOrdinata = stringa1 + stringa2 + stringa3;
+
+        // Concatenare le stringhe in ordine inverso
+        String concatenazioneInversa = stringa3 + stringa2 + stringa1;
+
+        // Stampare i risultati
+        System.out.println("Concatenazione in ordine: " + concatenazioneOrdinata);
+        System.out.println("Concatenazione in ordine inverso: " + concatenazioneInversa);
+
+        // Chiudere lo scanner
+        scanner.close();
     }
 
 }
